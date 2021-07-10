@@ -1,0 +1,43 @@
+nav a {
+    padding-top: 0.4rem;
+    padding-right: 1em;
+    padding-bottom: 0.4rem;
+    padding-left: 1em;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #FBDD11;
+    color: #2A2A2E;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #4CBF4B;
+}
+nav a.active {
+    background-color: black;
+}
+
+input[type="text"]
+{
+    font-family: 'Overpass Mono', monospace;
+    padding: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]
+{
+    font-family: 'Lato', monospace;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.trade {
+    display: flex;
+    justify-content: center;
+    height: 1.2em;
+}

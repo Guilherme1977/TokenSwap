@@ -1,0 +1,14 @@
+<div *ngIf="tradePossible else elseBlock">Please send an anmount <b>between {{ min }} and {{ max }}</b> {{ coin }} to the address below, within the next {{ timer }} seconds. 
+    <qrcode style="display: block; margin: 0.5em" [qrdata]="account_server" [width]="128" [errorCorrectionLevel]="'M'" [margin]='2'></qrcode>
+    <div style="font-family: 'Overpass Mono', monospace; font-size: 0.9em; word-break: break-all" >
+        {{ account_server }}
+    </div>
+    <nav>
+        <a [cdkCopyToClipboard]="account_server" style="cursor: 'pointer'" (click)=openSnackBar()>
+        Copy Address
+        </a>
+    </nav>
+</div>
+<ng-template #elseBlock>Sorry monke, the farm is already full of {{ coin }}, ready to be picked up. Try again later!
+</ng-template>
+

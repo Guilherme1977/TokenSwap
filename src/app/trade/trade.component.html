@@ -1,0 +1,11 @@
+<p>Enter your {{addressType}} address below.</p>
+
+<input type="text" [(ngModel)]="address" size="38" (keydown.enter)='submit()'><br>
+<nav>
+    <a [routerLink]="['']">Go back</a>
+    <span *ngIf="!(showInvalid && !validate())" style="display:inline-block; width: 11.1em;"></span>
+    <span *ngIf="showInvalid && !validate()" style="display:inline-block; width: 11.1em;">Invalid address</span>
+    <a *ngIf="validate()" (click)="submit()" style="cursor: 'pointer'">Submit</a>
+    <a *ngIf="!validate()" style="background-color: '#f5edb8'; color: 'grey'"
+    (click)='showInvalid=true'>Submit</a>
+</nav>
